@@ -3,9 +3,9 @@ import Home from "../Screens/Home";
 const stack = createNativeStackNavigator()
 
 
-const Navigations = () => {
+const Navigators = () => {
   return (
- <stack.Navigator>
+ <stack.Navigator screenOptions={{headerShown: false}} >
     <stack.Screen name="Home" component={Home} />
  </stack.Navigator>
   )
@@ -14,4 +14,4 @@ const Navigations = () => {
 
 
 
-export default Navigator
+export default Navigators

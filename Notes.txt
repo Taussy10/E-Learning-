@@ -1,0 +1,5 @@
+ by default react native flex is columns and every 
+ components goes down columns
+
+ Always have dynamic theming: making Colors files and defining
+ most used color by this you can change themeing of the app by chanign once 
