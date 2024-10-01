@@ -6,6 +6,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { SearchBar } from 'react-native-screens';
 import Courses from '../Components/Home/Courses';
 import { colors } from '../Utils/Colors';
+import { StatusBar } from 'expo-status-bar';
 
 const Home:FC = () => {
  
@@ -13,10 +14,17 @@ const Home:FC = () => {
 
 
   return (
+    // By safeareaVeiw you stay away from componets of phone such as frontcamer
+    // that's why on the top you will get huge space
+    // for 2 reasons: statusBar(By default) and SarfeAreaView(so that can stay away from phone front camera otherwise code will behind it )
     <SafeAreaView style={styles.container}>
-<ScrollView
+<ScrollView style={{backgroundColor:"green"}}
 showsVerticalScrollIndicator={false}
->
+>      
+<StatusBar style="light" />
+
+    {/* <StatusBar  /> */}
+    
 
         {/* for top bar */}
         <View style={styles.topBar}>
@@ -37,7 +45,7 @@ showsVerticalScrollIndicator={false}
 
 
 {/* for searchbar and filter */}
-<View style={{flexDirection: 'row', alignItems:'center', gap: 10, marginTop: 20,  }}>
+<View style={{flexDirection: 'row', alignItems:'center', gap: 20, marginTop: 20,  }}>
 
 {/* for searchbar */}
 <TextInput style={styles.searchBar}
@@ -103,8 +111,9 @@ export default Home
 const styles = StyleSheet.create({
     container:{
         flex:1 ,
-        padding: 20,
-        backgroundColor:'F9FBFF'
+       padding: 15 ,
+        // backgroundColor:'F9FBFF'
+        backgroundColor:'blue'
     },
     topBar:{
         flexDirection:'row',
