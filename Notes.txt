@@ -3,3 +3,34 @@
 
  Always have dynamic theming: making Colors files and defining
  most used color by this you can change themeing of the app by chanign once 
+
+ => know as implies sign 
+
+    // you have to give the name of paras
+    function normal(a, b , () => console.log("hello")) {
+        console.log(a+ b);
+    }
+    normal(4 , 6)
+
+
+    // this is the correct method
+    // How it was workin g
+    function normal(a, b , c , d) {
+        // 2. value of first param = a 
+
+        // 4. value of 2nd param = b 
+        console.log(a+ b);
+        // 5. console both the things
+
+        c()
+        //7. value of 3rd param = c and runs it
+
+         d 
+     // Won't execute just store the value of 4the params  
+    }
+
+    // 1.1st param = 4 
+    // 3.2nd param = 4 
+
+    // 6. 3rd param = function 
+    normal(4 , 6 ,() => console.log("hello") ,() => console.log("Chuha") )

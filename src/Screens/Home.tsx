@@ -8,6 +8,10 @@ import Courses from '../Components/Home/Courses';
 import { colors } from '../Utils/Colors';
 
 const Home:FC = () => {
+ 
+ 
+
+
   return (
     <SafeAreaView style={styles.container}>
 <ScrollView
