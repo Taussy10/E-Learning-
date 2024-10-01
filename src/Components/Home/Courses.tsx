@@ -9,7 +9,7 @@ const Courses = () => {
         {/*  */}
       <View style={{marginBottom: 10, }} >
 <Image source={require('../../../assets/Images/lesson-1.png')}
- style={{borderRadius: 20}} />
+ style={{borderRadius: 20 , width: "90%", }} />
       </View>
 
 <View style={{width: 160, marginBottom: 20 }}>
@@ -18,7 +18,7 @@ const Courses = () => {
 
 
 {/* Rating and timeStamps */}
-<View style={{flexDirection: 'row' , justifyContent: 'space-between' , }}>
+<View style={{flexDirection: 'row', backgroundColor:'blue' }}>
 
 <View style={{backgroundColor: "#EAF4FF" , width: 80 ,padding: 6, borderRadius: 10,   }}> 
     <Text style={{color: colors.PRIMARY}}>6h 30min</Text>
@@ -31,6 +31,8 @@ const Courses = () => {
 </View>
 
 </View>
+
+
     </View>
   )
 }
@@ -40,11 +42,12 @@ export default Courses
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        width: 220,
+        width: 200,
         // borderColor: 'black',
         // borderWidth: 5,
         padding: 10,  
-        // elevation: 5, 
-        
+        elevation: 10,
+        backgroundColor: 'lightgreen'
+
     }
 })
