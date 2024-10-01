@@ -4,3 +4,16 @@ export enum colors{
     PRIMARY= "#3D8FEF",
 
 }
+
+export const courseList = [
+    {
+        name: "Figma master class UI Design (28 lessons)",
+        duration: " 6h 3min",
+        ratings: 4.9,
+    },
+    {
+        name: "Web design for UX Design (28 lessons)",
+        duration: " 8h 3min",
+        ratings: 4.2,
+    },
+] 

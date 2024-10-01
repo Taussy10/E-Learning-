@@ -12,6 +12,9 @@ const Navigators = () => {
 }
 
 
+const Tabs = () =>{
+  
+}
 
 
 export default Navigators

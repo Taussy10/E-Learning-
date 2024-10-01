@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View , Image, TouchableOpacity, TextInput } from 'react-native'
+import { StyleSheet, Text, View , Image, TouchableOpacity, TextInput, ScrollView } from 'react-native'
 import React, { FC } from 'react'
 import Icons from '@expo/vector-icons/FontAwesome';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -10,6 +10,9 @@ import { colors } from '../Utils/Colors';
 const Home:FC = () => {
   return (
     <SafeAreaView style={styles.container}>
+<ScrollView
+showsVerticalScrollIndicator={false}
+>
 
         {/* for top bar */}
         <View style={styles.topBar}>
@@ -85,6 +88,7 @@ activeOpacity={0.8}
 </View>
 
 <Courses />
+</ScrollView>
 
     </SafeAreaView>
   )
@@ -115,10 +119,12 @@ const styles = StyleSheet.create({
     },
     filter:{
         backgroundColor: colors.PRIMARY,
-        padding:10,
+        // padding:10,
         height: 50,
-        width:50,
+        width:40,
         borderRadius: 10,
+        justifyContent: 'center',
+        alignItems:'center'
     },
     banner:{
         flexDirection:'row',
