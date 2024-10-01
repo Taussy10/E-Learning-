@@ -18,7 +18,7 @@ const Home:FC = () => {
     // that's why on the top you will get huge space
     // for 2 reasons: statusBar(By default) and SarfeAreaView(so that can stay away from phone front camera otherwise code will behind it )
     <SafeAreaView style={styles.container}>
-<ScrollView style={{backgroundColor:"green"}}
+<ScrollView 
 showsVerticalScrollIndicator={false}
 >      
 <StatusBar style="light" />
@@ -31,7 +31,7 @@ showsVerticalScrollIndicator={false}
 
     {/* for text */}
     <View>
-     <Text style={{fontWeight: 'bold', fontSize: 25 , color: "#2C2C2C" }}>Hi , Jerel</Text>
+     <Text style={{fontWeight: 'bold', fontSize: 25 , color: "#2C2C2C" }}>Hi , Bro</Text>
      <Text style={{ color: 'grey' , fontSize: 15 }}>Find your lessons today!</Text>
      </View>
 
@@ -112,8 +112,7 @@ const styles = StyleSheet.create({
     container:{
         flex:1 ,
        padding: 15 ,
-        // backgroundColor:'F9FBFF'
-        backgroundColor:'blue'
+        backgroundColor:'#F9FBFF'
     },
     topBar:{
         flexDirection:'row',
