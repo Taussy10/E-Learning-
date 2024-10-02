@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View , Image, TouchableOpacity, TextInput, ScrollView } from 'react-native'
 import React, { FC } from 'react'
-import Icons from '@expo/vector-icons/FontAwesome';
+// import {FontAwesome , Ionicons , } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { SearchBar } from 'react-native-screens';
