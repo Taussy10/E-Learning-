@@ -17,15 +17,15 @@ const Courses = () => {
        showsHorizontalScrollIndicator={false}
        
        renderItem={({item}) => (
- <View style={{marginRight: 10 , elevation: 0.7, 
+ <View style={{marginRight: 10 , elevation: 10, 
  }}>
 <View style={{marginBottom: 10, }} >
 <Image source={require('../../../assets/Images/lesson-1.png')}
- style={{borderRadius: 20 , width: "90%", }} />
+ style={{borderRadius: 20 , width: "100%", }} />
       </View>
 
 <View style={{width: 160, marginBottom: 20 }}>
-<Text style={{color:"#2C2C2C" , fontWeight: 'bold' }}> {item.name} <Text style={{color: '#AEAEAE'}}> (28 lessons) </Text></Text>
+<Text style={{color:"#2C2C2C" , fontWeight: 'semibold' }}> {item.name} <Text style={{color: '#AEAEAE' , fontWeight: 'semibold'}}> ({item.lessons}) </Text></Text>
 </View>
 
 
@@ -62,11 +62,13 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
         width: "100%",
+        // width: 1000,
         height: '100%',
         // borderColor: 'black',
         // borderWidth: 5,
-        padding: 10,  
+        // padding: 10,  
         // backgroundColor: 'lightgreen',
+        marginTop: 10,
         justifyContent: 'center'
 
     }

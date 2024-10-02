@@ -34,3 +34,21 @@
 
     // 6. 3rd param = function 
     normal(4 , 6 ,() => console.log("hello") ,() => console.log("Chuha") )
+
+Higher order function uses when
+1. asynchronous programming(not with will execute later)
+2. 
+
+
+when we write function when to  use when
+1.  function normal(a, b , c , d) {console.log("Hello") , console.log("HI") }
+2.  function normal(a, b , c , d) console.log("hello")
+
+when need to  write single statments in the  body of function then no need to write {} 
+and if multiple statements in body then write curly
+
+
+  paddingLeft: 20,
+        paddingRight: 10,
+        paddingBottom: 10,
+        paddingTop: 10,
