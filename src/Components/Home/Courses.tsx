@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View , Image, FlatList, ScrollView } from 'react-native'
+import { StyleSheet, Text, View , Image, FlatList, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { colors,  courseList } from '../../Utils/Colors'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -26,7 +26,12 @@ const navigation = useNavigation()
        
     //   {  navigation.navigate("CourseDetails") }
        renderItem={({item}) => (
- <View style={{marginRight: 100 , elevation: 10, backgroundColor:'green'
+
+ <TouchableOpacity
+ activeOpacity={0.7}
+//  why item cause converted them in courseList in item
+ onPress={():void => navigation.navigate("CourseDetails" ,   )}
+ style={{marginRight: 10 , elevation: 10, backgroundColor:'green'
  }}  >
 <View style={{marginBottom: 10, }} >
 <Image source={require('../../../assets/Images/lesson-1.png')}
@@ -54,7 +59,7 @@ const navigation = useNavigation()
 </View>
 
 
- </View>
+ </TouchableOpacity>
 
        )} 
         />
