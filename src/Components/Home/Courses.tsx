@@ -2,11 +2,19 @@ import { StyleSheet, Text, View , Image, FlatList, ScrollView } from 'react-nati
 import React from 'react'
 import { colors,  courseList } from '../../Utils/Colors'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { useNavigation } from '@react-navigation/native';
+
+// only TouchableOpacity and simillar to it's component 
+// and pressable has onPress 
+
 const Courses = () => {
+const navigation = useNavigation()
+
   return (
     // <ScrollView>
 
-    <View style={styles.container}>
+    <View style={styles.container} 
+    >
 
         {/*  */}
 
@@ -16,9 +24,10 @@ const Courses = () => {
        horizontal
        showsHorizontalScrollIndicator={false}
        
+    //   {  navigation.navigate("CourseDetails") }
        renderItem={({item}) => (
- <View style={{marginRight: 10 , elevation: 10, 
- }}>
+ <View style={{marginRight: 100 , elevation: 10, backgroundColor:'green'
+ }}  >
 <View style={{marginBottom: 10, }} >
 <Image source={require('../../../assets/Images/lesson-1.png')}
  style={{borderRadius: 20 , width: "100%", }} />

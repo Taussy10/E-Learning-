@@ -12,6 +12,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { colors } from "../Utils/Colors";
 import CompletedCourses from "../Screens/CompletedCourses";
 import Notes from "../Screens/Notes";
+import CourseDetails from "../Screens/CourseDetails";
 
 
 const stack = createNativeStackNavigator()
@@ -21,6 +22,7 @@ const Navigators = () => {
   return (
  <stack.Navigator screenOptions={{headerShown: false}} >
     <stack.Screen name="Tabs" component={Tabs} />
+    <stack.Screen name="CourseDetails" component={CourseDetails} />
     {/* YOu have to pass the intital tabs taht you want to pass */}
 
  </stack.Navigator>

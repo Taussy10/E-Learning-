@@ -8,6 +8,7 @@ import Courses from '../Components/Home/Courses';
 import { colors } from '../Utils/Colors';
 import { StatusBar } from 'expo-status-bar';
 
+
 const Home:FC = () => {
  
  
