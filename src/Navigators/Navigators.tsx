@@ -20,7 +20,9 @@ const stack = createNativeStackNavigator()
 
 const Navigators = () => {
   return (
- <stack.Navigator screenOptions={{headerShown: false}} >
+ <stack.Navigator screenOptions={{headerShown: false}}
+ initialRouteName="CourseDetails"
+ >
     <stack.Screen name="Tabs" component={Tabs} />
     <stack.Screen name="CourseDetails" component={CourseDetails} />
     {/* YOu have to pass the intital tabs taht you want to pass */}

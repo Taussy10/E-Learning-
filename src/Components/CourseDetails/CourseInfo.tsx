@@ -2,13 +2,11 @@ import { StyleSheet, Text, View , Image, FlatList, ScrollView, TouchableOpacity 
 import React from 'react'
 import { colors,  courseList } from '../../Utils/Colors'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { useNavigation } from '@react-navigation/native';
 
 // only TouchableOpacity and simillar to it's component 
 // and pressable has onPress 
 
 const CourseInfo = () => {
-const navigation = useNavigation()
 
   return (
     // <ScrollView>
@@ -36,15 +34,15 @@ const navigation = useNavigation()
 
 
 {/* Rating and timeStamps */}
-<View style={{flexDirection: 'row', justifyContent: 'space-between',   }}>
+<View style={{flexDirection: 'row', justifyContent: 'space-between',  alignItems: 'center'  }}>
 
 <Text style={{color: '#8C8C8C' , fontWeight: 'semibold'}}> (6h 30min) </Text>
 <Text style={{color: '#8C8C8C' , fontWeight: 'semibold'}}> 28 Lessons </Text>
 
 
 
-<View style={{backgroundColor: "#EAF4FF" , width: 80 ,padding: 6, borderRadius: 10, flexDirection: 'row'  }}> 
-<FontAwesome name="star" size={24} color="#FFC71E" />
+<View style={{backgroundColor: "#EAF4FF" , width: 55 ,padding: 6, borderRadius: 10, flexDirection: 'row'  }}> 
+<FontAwesome name="star" size={18} color="#FFC71E" />
     <Text style={{color: colors.PRIMARY}}> 4.9</Text>
 </View>
 </View>
@@ -64,10 +62,9 @@ export default CourseInfo
 
 const styles = StyleSheet.create({
     container:{
-        flex: 1,
-        width: "100%",
+        // flex: 1,
+        // Don't give flex 1 other wise it will take whole space of screen
         // width: 1000,
-        height: '100%',
         // borderColor: 'black',
         // borderWidth: 5,
         // padding: 10,  
