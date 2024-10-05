@@ -9,7 +9,6 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 const CourseInfo = () => {
 
   return (
-    // <ScrollView>
 
     <View style={styles.container} 
     >
@@ -53,7 +52,7 @@ const CourseInfo = () => {
       
       
     </View>
-    // </ScrollView>
+    
 
   )
 }

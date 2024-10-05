@@ -3,11 +3,10 @@ import React, { FC } from 'react'
 // import {FontAwesome , Ionicons , } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { SearchBar } from 'react-native-screens';
-import Courses from '../Components/Home/Courses';
-import { colors } from '../Utils/Colors';
+import Courses from '../../Components/Home/Courses';
+import { colors } from '../../Utils/Colors';
 import { StatusBar } from 'expo-status-bar';
-
+import SearchBar from '../../Components/Home/SearchBar';
 
 const Home:FC = () => {
  
@@ -46,25 +45,7 @@ showsVerticalScrollIndicator={false}
 
 
 {/* for searchbar and filter */}
-<View style={{flexDirection: 'row', alignItems:'center', gap: 20, marginTop: 20,  }}>
-
-{/* for searchbar */}
-<TextInput style={styles.searchBar}
-placeholder='Search Now '
->
-    
-<Ionicons name="search-outline" size={24} color="black" />
-</TextInput>
-
-{/* for filter */}
-
-
-<View style={styles.filter}>
-
-<Ionicons name="filter-circle-outline" size={30} color="white" />
-</View>
-
-</View>
+<SearchBar />
 
 
 <View style={styles.banner}>
@@ -88,7 +69,7 @@ activeOpacity={0.8}
     </View>
 
     <View>
-        <Image source={require('../../assets/Images/banner.png')}  />
+        <Image source={require('../../../assets/Images/banner.png')}  />
     </View>
 
 </View>

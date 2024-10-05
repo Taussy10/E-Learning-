@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Home from "../Screens/Home";
+import Home from "../Screens/Tabs/Home";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Profile from "../Screens/Profile";
+import Profile from "../Screens/Tabs/Profile";
 
 // Define the type for the icon mapping
 interface IconTS {
@@ -10,9 +10,10 @@ interface IconTS {
 
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { colors } from "../Utils/Colors";
-import CompletedCourses from "../Screens/CompletedCourses";
-import Notes from "../Screens/Notes";
+import CompletedCourses from "../Screens/Tabs/CompletedCourses";
+import Notes from "../Screens/Tabs/Notes";
 import CourseDetails from "../Screens/CourseDetails";
+import SearchScreen from "../Screens/SearchScreen";
 
 
 const stack = createNativeStackNavigator()
@@ -21,12 +22,14 @@ const stack = createNativeStackNavigator()
 const Navigators = () => {
   return (
  <stack.Navigator screenOptions={{headerShown: false}}
- initialRouteName="CourseDetails"
+  // initialRouteName="SearchScreen"
  >
-    <stack.Screen name="Tabs" component={Tabs} />
-    <stack.Screen name="CourseDetails" component={CourseDetails} />
-    {/* YOu have to pass the intital tabs taht you want to pass */}
+    <stack.Screen name="Tabs" component={Tabs}
 
+    />
+    {/* Pass the tab function here the inital tab will show by default*/}
+    <stack.Screen name="CourseDetails" component={CourseDetails} />
+    <stack.Screen name="SearchScreen" component={SearchScreen} />
  </stack.Navigator>
   )
 }

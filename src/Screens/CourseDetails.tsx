@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, TouchableOpacityComponent, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, TouchableOpacity, TouchableOpacityComponent, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 // We get safeAreaView from 3 places 
@@ -14,20 +14,34 @@ import CourseInfo from '../Components/CourseDetails/CourseInfo';
 import { useNavigation } from '@react-navigation/native';
 import Chapter from '../Components/CourseDetails/Chapter';
 
+import  { useNavigationState } from '@react-navigation/native';
+import Header from '../Components/Home/Header';
+
+
 
 const CourseDetails = () => {
  
   const navigation = useNavigation()
 
+
+
   return (
     <SafeAreaView style={styles.container}>
+<ScrollView showsVerticalScrollIndicator={false}>
 
       {/* For topbar */}
-      <View style={styles.topBar}>
+      {/* <View style={styles.topBar}>
      <AntDesign name="left" size={24} color="black" onPress={() => navigation.goBack()} />     
      <Text>Course Overview</Text>
      <AntDesign name="hearto" size={24} color="black" />
-      </View>
+      </View> */}
+
+{/* for the Header */}
+      <Header 
+      leftIcon = "left"
+      headerName = "Course Overview"
+      rightIcon = "hearto"
+      />
 
 <CourseInfo />
     
@@ -44,6 +58,7 @@ const CourseDetails = () => {
  <Chapter lessonName = "Understanding Interface" duration ="6:12 min" />  
  <Chapter lessonName = "Create first design project" duration ="43:28 min" />  
  <Chapter lessonName = "Prototyping the design" duration ="40:15 min" />  
+ 
 
 
 
@@ -66,6 +81,7 @@ style={styles.button}>
 
 </View>
 
+</ScrollView>
 
     </SafeAreaView>
   )
@@ -79,10 +95,10 @@ const styles = StyleSheet.create({
 padding: 15,  
 backgroundColor: colors.ScreenColor
  }, 
- topBar:{
-    flexDirection: 'row',
-    justifyContent:'space-between',
-  },
+//  topBar:{
+//     flexDirection: 'row',
+//     justifyContent:'space-between',
+//   },
   priceContainer:{
     borderRadius: 10,
     padding: 10,
