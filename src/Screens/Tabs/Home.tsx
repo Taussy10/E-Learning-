@@ -4,7 +4,7 @@ import React, { FC } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Courses from '../../Components/Home/Courses';
-import { colors } from '../../Utils/Colors';
+import { colors } from '../../Utils/Constants';
 import { StatusBar } from 'expo-status-bar';
 import SearchBar from '../../Components/Home/SearchBar';
 

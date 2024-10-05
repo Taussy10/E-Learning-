@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import {AntDesign , Entypo} from '@expo/vector-icons'
-import { colors } from '../../Utils/Colors'
+import { colors } from '../../Utils/Constants'
 
 
 const Chapter = ({lessonName , duration}) => {

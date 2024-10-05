@@ -9,7 +9,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 // Now you can import any vector icons: I learned this technique from "List of RN apps code on github"
 
 import {AntDesign} from '@expo/vector-icons';
-import { colors } from '../Utils/Colors';
+import { colors } from '../Utils/Constants';
 import CourseInfo from '../Components/CourseDetails/CourseInfo';
 import { useNavigation } from '@react-navigation/native';
 import Chapter from '../Components/CourseDetails/Chapter';

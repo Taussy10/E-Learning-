@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View , TextInput  } from 'react-native'
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { colors } from '../../Utils/Colors';
+import { colors } from '../../Utils/Constants';
 
 
 const SearchBar = () => {

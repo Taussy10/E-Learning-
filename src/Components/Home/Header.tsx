@@ -13,7 +13,7 @@ const Header = ({leftIcon , headerName , rightIcon}) => {
 
    <View style={styles.topBar}>
      <AntDesign name={leftIcon} size={24} color="black" onPress={() => navigation.goBack()} />     
-     <Text>Course Overview</Text>
+     <Text style={{fontWeight: 'bold' , fontSize: 18,}}>{headerName}</Text>
      <AntDesign name={rightIcon} size={24} color="black" />
       </View>
 

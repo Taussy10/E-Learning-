@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View , Image, FlatList, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { colors,  courseList } from '../../Utils/Colors'
+import { colors,  courseList } from '../../Utils/Constants'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
 

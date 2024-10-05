@@ -9,7 +9,7 @@ interface IconTS {
 }
 
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { colors } from "../Utils/Colors";
+import { colors } from "../Utils/Constants";
 import CompletedCourses from "../Screens/Tabs/CompletedCourses";
 import Notes from "../Screens/Tabs/Notes";
 import CourseDetails from "../Screens/CourseDetails";
@@ -22,7 +22,7 @@ const stack = createNativeStackNavigator()
 const Navigators = () => {
   return (
  <stack.Navigator screenOptions={{headerShown: false}}
-  // initialRouteName="SearchScreen"
+  initialRouteName="SearchScreen"
  >
     <stack.Screen name="Tabs" component={Tabs}
 
