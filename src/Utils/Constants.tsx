@@ -12,6 +12,8 @@ export const courseList = [
         lessons: "28 lessons",
         duration: " 6h 3min",
         ratings: 4.9,
+        image: require('../../assets/Images/SearchedImages/image-1.png'),
+
     },
     {
         name: "Web design for UX Design",
@@ -19,6 +21,24 @@ export const courseList = [
         duration: " 8h 3min",
         ratings: 4.2,
     },
+    {
+        name: "Mobile UI Essentials ",
+        lessons: "28 lessons",
+        duration: " 6h 3min",
+        ratings: 4.4,
+        image: require('../../assets/Images/SearchedImages/image-2.png'),
+        level: "Intermediate"
+        
+    },
+    {
+        name: "Web UI Best Practices",
+        lessons: "46 lessons",
+        duration: " 8h 28min",
+        ratings: 4.6,
+        image: require('../../assets/Images/SearchedImages/image-3.png'),
+        level: "Advanced",
+    },
+    
 ]
 
 export const searchList = [
@@ -60,4 +80,5 @@ export const searchList = [
         level: "Intermediate",
 
     },
+
 ] 

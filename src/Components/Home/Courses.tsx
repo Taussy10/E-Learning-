@@ -34,7 +34,7 @@ const navigation = useNavigation()
  style={{marginRight: 10 , elevation: 10, backgroundColor:'green'
  }}  >
 <View style={{marginBottom: 10, }} >
-<Image source={require('../../../assets/Images/lesson-1.png')}
+<Image source={item.image}
  style={{borderRadius: 20 , width: "100%", }} />
       </View>
 

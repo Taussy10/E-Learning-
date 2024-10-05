@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { colors } from '../Utils/Constants'
@@ -10,6 +10,8 @@ import Cards from '../Components/SearchScreen/Cards'
 const SearchScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
+        {/* <ScrollView> */}
+
         {/* for the Header */}
       <Header 
       leftIcon = "left"
@@ -18,10 +20,14 @@ const SearchScreen = () => {
       />
         <SearchBar />
 
+<ScrollView showsVerticalScrollIndicator={false}>
 
 <Cards />
+</ScrollView>
 
-<SearchCourses />
+{/* <SearchCourses /> */}
+{/* </ScrollView> */}
+
     </SafeAreaView>
   )
 }
