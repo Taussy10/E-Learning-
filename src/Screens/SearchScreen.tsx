@@ -17,9 +17,11 @@ const SearchScreen = () => {
       rightIcon = "setting"
       />
         <SearchBar />
-<SearchCourses />
+
 
 <Cards />
+
+<SearchCourses />
     </SafeAreaView>
   )
 }
