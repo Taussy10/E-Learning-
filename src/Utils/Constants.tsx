@@ -20,6 +20,8 @@ export const courseList = [
         lessons: "30 lessons",
         duration: " 8h 3min",
         ratings: 4.2,
+        image: require('../../assets/Images/SearchedImages/image-4.png'),
+
     },
     {
         name: "Mobile UI Essentials ",
@@ -27,7 +29,6 @@ export const courseList = [
         duration: " 6h 3min",
         ratings: 4.4,
         image: require('../../assets/Images/SearchedImages/image-2.png'),
-        level: "Intermediate"
         
     },
     {
@@ -36,9 +37,10 @@ export const courseList = [
         duration: " 8h 28min",
         ratings: 4.6,
         image: require('../../assets/Images/SearchedImages/image-3.png'),
-        level: "Advanced",
+
+
     },
-    
+
 ]
 
 export const searchList = [

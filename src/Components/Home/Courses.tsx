@@ -28,14 +28,15 @@ const navigation = useNavigation()
        renderItem={({item}) => (
 
  <TouchableOpacity
- activeOpacity={0.7}
+ activeOpacity={0.9}
 //  why item cause converted them in courseList in item
  onPress={():void => navigation.navigate("CourseDetails" ,   )}
- style={{marginRight: 10 , elevation: 10, backgroundColor:'green'
+ style={{marginRight: 10 , elevation: 0.7,borderRadius: 20 
  }}  >
-<View style={{marginBottom: 10, }} >
-<Image source={item.image}
- style={{borderRadius: 20 , width: "100%", }} />
+<View style={{marginBottom: 10, justifyContent:'center', alignItems:'center' }} >
+<Image source={require('../../../assets/Images/lesson-1.png') }
+ style={{borderRadius: 20 , width: "100%", }}
+  />
       </View>
 
 <View style={{width: 160, marginBottom: 20 }}>
@@ -44,9 +45,9 @@ const navigation = useNavigation()
 
 
 {/* Rating and timeStamps */}
-<View style={{flexDirection: 'row', justifyContent: 'space-between',  width: 157, }}>
+<View style={{flexDirection: 'row', justifyContent: 'space-between',   }}>
 
-<View style={{backgroundColor: "#EAF4FF" , width: 80 ,padding: 6, borderRadius: 10,   }}> 
+<View style={{backgroundColor: "#EAF4FF"  ,padding: 6, borderRadius: 10,   }}> 
     <Text style={{color: colors.PRIMARY}}>{item.duration}</Text>
 </View>
 

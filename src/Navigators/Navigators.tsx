@@ -22,7 +22,7 @@ const stack = createNativeStackNavigator()
 const Navigators = () => {
   return (
  <stack.Navigator screenOptions={{headerShown: false}}
-  initialRouteName="SearchScreen"
+  // initialRouteName="SearchScreen"
  >
     <stack.Screen name="Tabs" component={Tabs}
 
