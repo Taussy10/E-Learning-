@@ -14,6 +14,7 @@ import CompletedCourses from "../Screens/Tabs/CompletedCourses";
 import Notes from "../Screens/Tabs/Notes";
 import CourseDetails from "../Screens/CourseDetails";
 import SearchScreen from "../Screens/SearchScreen";
+import Auth from "../Utils/Auth";
 
 
 const stack = createNativeStackNavigator()
@@ -22,11 +23,11 @@ const stack = createNativeStackNavigator()
 const Navigators = () => {
   return (
  <stack.Navigator screenOptions={{headerShown: false}}
-  // initialRouteName="SearchScreen"
+  initialRouteName="Auth"
  >
-    <stack.Screen name="Tabs" component={Tabs}
+    <stack.Screen name="Auth" component={Auth}/>
 
-    />
+    <stack.Screen name="Tabs" component={Tabs}/>
     {/* Pass the tab function here the inital tab will show by default*/}
     <stack.Screen name="CourseDetails" component={CourseDetails} />
     <stack.Screen name="SearchScreen" component={SearchScreen} />

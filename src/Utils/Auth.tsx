@@ -1,18 +1,27 @@
 import { StyleSheet, Text, View , TouchableOpacity , TextInput} from 'react-native'
-import React,{useState} from 'react'
+import React,{useState , useEffect} from 'react'
 import {Client , Account , ID , Models} from "react-native-appwrite"
+import { useNavigation } from '@react-navigation/native';
+
 
 
 
 let client: Client;
 let account: Account;
+// wrote account as Account: it's just aka like Computer alias PC
+
 
 client = new Client();
+// client me ek method use Client()
+
 
 client
     .setEndpoint('https://cloud.appwrite.io/v1')
     .setProject('6703f75e000c09bd4a29')
-    .setPlatform('com.taussy10.ELearning'); // Your package name / bundle identifier
+    .setPlatform('com.taussy10.ELearning'); 
+
+// It gave 3 function setEndpoint ... setproject and setPlatform 
+
 
 account = new Account(client);
 
@@ -20,23 +29,33 @@ account = new Account(client);
 
 
 const Auth = () => {
-    // const [loggedInUser, setLoggedInUser] = useState<Models.User<Models.Preferences> | null>(null);
-    
+
     const [loggedInUser, setLoggedInUser] = useState<Models.User<Models.Preferences> | null>(null);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
   
+
+ useEffect(() => {
+  if (loggedInUser) {
+    navigation.navigate("Tabs")
+    
+  }}, [])
+ 
+    // Created a function for Login 
     async function login(email: string, password: string) {
       await account.createEmailPasswordSession(email, password);
       setLoggedInUser(await account.get());
     }
   
+    // Create a function for registering a user 
     async function register(email: string, password: string, name: string) {
       await account.create(ID.unique(), email, password, name);
       await login(email, password);
       setLoggedInUser(await account.get());
     }
+
+    const navigation = useNavigation();
 
   return (
     <View style={styles.root}>
@@ -115,14 +134,6 @@ const styles = StyleSheet.create({
     },
   });
   
-
-
-
-
-
-
-
-
 
 
 
